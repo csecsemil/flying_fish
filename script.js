@@ -64,21 +64,23 @@ function checkAnswer(button, isCorrect) {
 
     if (answeredQuestions === 3) {
         const scoreDiv = document.getElementById('quiz-score');
-        scoreDiv.innerText = 'You scored ${score} out of 3!';
+        scoreDiv.innerText = `You scored ${score} out of 3!`;
         document.getElementById('resetQuizBtn').style.display = 'block';
 
     
     };
     
 }
-function resetQuizBtn() {
+function resetQuiz() {
     score = 0;
     answeredQuestions = 0;
+
     document.getElementById('quiz-score').innerText = '';
     document.getElementById('resetQuizBtn').style.display = 'none';
 
     //minden gombot alapelyzetbe allitunk
     const allButtons = document.querySelectorAll('.quiz-btn');
+
     allButtons.forEach(btn => {
         btn.disabled = false,
         btn.classList.remove('correct', 'incorrect');
