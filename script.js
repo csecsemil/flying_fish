@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    showPhase(1);
+});
+
 function showPhase(phaseNumber) {
     document.getElementById('content1').style.display = 'none';
     document.getElementById('content2').style.display = 'none';
@@ -5,12 +9,11 @@ function showPhase(phaseNumber) {
     document.getElementById('content' + phaseNumber).style.display = 'block';
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    showPhase(1);
-});
+
 
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
+
 }
 
 
@@ -19,7 +22,6 @@ function calculateGlide() {
     let speed = document.getElementById('speedInput').value;
     let distance = speed * 3.5;
     document.getElementById('calcResult').innerText = 'Estimated maximum flight distance: ' + distance + ' m!';
-
 }
 
 
@@ -37,5 +39,49 @@ function getRandomFact() {
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+// mini quiz
+
+let score = 0;
+let answeredQuestions = 0;
+ 
+function checkAnswer(button, isCorrect) {
+
+    const questionBlock = button.parentElement;
+    const buttonsInBlock = questionBlock.querySelectorAll('.quiz-btn');
+    buttonsInBlock.forEach(btn => btn.disabled = true);
+
+    if (isCorrect) {
+        button.classList.add('correct');
+        score++;
+    } else {
+        button.classList.add('incorrect');
+    } 
+
+    answeredQuestions++;
+
+    if (answeredQuestions === 3) {
+        const scoreDiv = document.getElementById('quiz-score');
+        scoreDiv.innerText = 'You scored ${score} out of 3!';
+        document.getElementById('resetQuizBtn').style.display = 'block';
+
+    
+    };
+    
+}
+function resetQuizBtn() {
+    score = 0;
+    answeredQuestions = 0;
+    document.getElementById('quiz-score').innerText = '';
+    document.getElementById('resetQuizBtn').style.display = 'none';
+
+    //minden gombot alapelyzetbe allitunk
+    const allButtons = document.querySelectorAll('.quiz-btn');
+    allButtons.forEach(btn => {
+        btn.disabled = false,
+        btn.classList.remove('correct', 'incorrect');
+    });
 }
 

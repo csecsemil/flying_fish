@@ -170,4 +170,26 @@ body.dark-mode section {
     margin: 8px;
     padding: 10px;
     text-align: left;
+    background-color: #f0f4f8;
+    border: 2px solid #003366;
+    color: #003366;
+    font-weight: bold;
+
 }
+
+.quiz-btn.correct {
+    background-color: #28a745;
+    color: white;
+    border-color: #1e7e34;
+
+}
+
+.quiz-btn.incorrect {
+    background-color: #f01111;
+    color: white;
+    border-color: #860c0c;
+    
+}
+
+
+
