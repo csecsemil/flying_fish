@@ -13,3 +13,7 @@ function getFact() {
     let index = Math.floor(Math.random() * facts.lengt);
     document.getElementById('factText').innerText = facts[index];
 }
+
+function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+}

@@ -30,3 +30,14 @@ table {
     width: 100%;
     text-align: left;
 }
+
+
+.dark-mode {
+    background-color: #464545;
+    color: #ffffff;
+}
+
+.dark-mode section {
+    background-color: #202020;
+    border-color: #444;
+}
