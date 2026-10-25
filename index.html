@@ -10,6 +10,8 @@
     <header>
         <h1>Flying Fish</h1>
         <p>the dragons of the Ocean</p>
+
+        <button id="theme-toggle" onclick="toggleTheme()">Dark/Light mode</button>
     </header>
 
     <nav>
@@ -52,7 +54,7 @@
 
         <div id="content2" class="phase-content" >
             <img src="theflyingfish.2.webp" alt="launch">
-            <h3>Step 3: Gliding in the Air</h3>
+            <h3>Step 2: Gliding in the Air</h3>
             <p>Onec out of the water, it  spreads its large fins and gliges useing airplane magic.</p>
         </div>
 
@@ -120,10 +122,64 @@
         
     </section>
     <br>
+
+    <div class="calculator">
+        <h3>Flying distance</h3>
+        <label>Starting speed (km/h): </label>
+        <input type="number" id="speedInput" value="60">
+        <button onclick="calculateGlide()">Calculate!</button>
+        <p id="calcResult"></p>
+    </div>
+
+
+
     <br>
 
+    <div class="fact-box">
+        <h3>Did you know?</h3>
+
+        <p id="factDisplay">Click the button for funfact!</p>
+        <button onclick="getRandomFact()">New fact!</button>
+
+    </div>
 
 
+
+    <section id="quiz">
+        <h2>Flying fish miniquiz</h2>
+        <p>Test yourr knowledge</p>
+        
+        <div id="quiz-container">
+            <div class="question-block">
+                <p><strong>1. How fast can a flying fish swim underwater before launching?</strong></p>
+                <button class="quiz-btn"  onclick="checkAnswer(this, false)">30 km/h</button>
+                <button class="quiz-btn" onclick="checkAnswer(this, true)">60km/h</button>
+                <button class="quiz-btn" onclick="checkAnswer(this, false)">100km/h</button>
+            </div>
+
+            <div class="question-block">
+                <p><strong>2. Why do flying fish primarily leap out of the water?</strong></p>
+                <button class="quiz-btn" onclick="checkAnswer(this, false)">To catch birds</button>
+                <button class="quiz-btn" onclick="checkAnswer(this, false)">Just for fun</button>
+                <button class="quiz-btn" onclick="checkAnswer(this, true)">To escape predators lke dolphins and tuna</button>
+            </div>
+
+            <div class="question-block">
+                <p><strong>3. Do flying fish flap their fins like birds wings during flight?</strong></p>
+                <button class="quiz-btn" onclick="checkAnswer(this, false)">yes</button>
+                <button class="quiz-btn" onclick="checkAnswer(this, true)">No, they are glide like sailplanes</button>
+            </div>
+        </div>
+
+        <div id="quiz-score" style="margin-top: 15px; font-weight: bold;"></div>
+        <button id="resetQuizBtn" onclick="resetQuiz()" style="display: none; margin-top: 10px;">Reset</button>
+
+    </section>
+
+
+    <button id="topBtn" onclick="scrollToTop">Jump to the top!</button>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
