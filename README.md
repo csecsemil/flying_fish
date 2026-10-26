@@ -1,1 +1,1 @@
-I was working on a website about the flying fish, i added a calkulator, and quize.
+I was working on a website about the flying fish. This project is 2 site, featuring custom styling and responsive design. It includes a dark/light mode toggle, an interactive flight phase switcher, a flying distance calculator, and a multiple-choice quiz with real-time score tracking.
