@@ -41,3 +41,16 @@ table {
     background-color: #202020;
     border-color: #444;
 }
+button {
+    background-color: #88c6eb;
+    color: #264766;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 18px;
+}
+
+h2 {
+    color: #202020;
+    font-size: 20px;
+    margin: 15px;
+}

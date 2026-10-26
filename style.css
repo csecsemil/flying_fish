@@ -11,7 +11,7 @@ header {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 header h1 {
@@ -26,10 +26,6 @@ header p {
     text-align: center;
     padding: 10px;
     border-bottom: 3px solid #000;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
 }
 
 nav a {
@@ -60,6 +56,11 @@ section {
     padding: 20px;
 }
 
+
+table {
+    background-color: #c0ddfa;
+    border: 2px solid #000;
+}
 
 
 img {
@@ -182,7 +183,7 @@ details p {
     padding-bottom: 5px;
 }
 .calculator label {
-    font-style: bold;
+    font-weight: bold;
     display: inline-block;
     margin-right: 10px;
 }
@@ -202,6 +203,10 @@ button {
     padding: 8px 16px;
     font-size: 15px;
 }
+button:hover{
+    background-color: #041c35;
+}
+
 
 #calcResult {
     font-weight: bold;
@@ -272,13 +277,13 @@ button {
 .quiz-btn.correct {
     background-color: #28a745;
     color: white;
-    border-color: #1e7e34;
+    border-color: #125321;
 
 }
 
 .quiz-btn.incorrect {
     background-color: #f01111;
     color: white;
-    border-color: #860c0c;
+    border-color: #630c0c;
     
 }
