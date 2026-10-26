@@ -43,6 +43,13 @@ table {
     width: 100%;
     text-align: left;
 }
+ ul {
+    padding-left: 20px;
+ }
+ li {
+    margin-bottom: 5px;
+ }
+ 
 
 
 .dark-mode {

@@ -10,7 +10,7 @@ const facts = [
     "Their eyesight is estimated to be 8 times better than a human's."
 ];
 function getFact() {
-    let index = Math.floor(Math.random() * facts.lengt);
+    let index = Math.floor(Math.random() * facts.length);
     document.getElementById('factText').innerText = facts[index];
 }
 
