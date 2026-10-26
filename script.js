@@ -82,7 +82,7 @@ function resetQuiz() {
     const allButtons = document.querySelectorAll('.quiz-btn');
 
     allButtons.forEach(btn => {
-        btn.disabled = false,
+        btn.disabled = false;
         btn.classList.remove('correct', 'incorrect');
     });
 }
